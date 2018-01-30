@@ -1,0 +1,113 @@
+/**
+ * 组件样式说明：
+ * 用来覆盖 element-ui 组件的样式，符合自己的视觉交互规范 
+ * 如何视觉出的视觉稿没有符合规范，可以要求他们按照这份规范来
+ */
+
+@import './common/var.css';
+
+/**
+ * button 样式覆盖 
+ */
+
+.el-button {
+  border-radius: 2px;
+  padding: 10px 27px;
+  &--default {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    &:hover {
+      background-color: #fff;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+  }
+  &--primary {
+    color: #fff;
+    background-color: var(--color-primary)!important;
+    border-color: var(--color-primary)!important;
+    &:hover{
+      color: #fff;
+      background: var(--color-primary-hover)!important;
+      border-color: var(--color-primary);
+    }
+  }
+}
+
+/**
+ * input 样式覆盖
+ */
+
+.el-input {
+  .el-input__inner {
+    color: #333;
+    height: 36px;
+    border-color: #ccc;
+    border-radius: 0;
+
+    &::placeholder {
+      color: #ccc;
+    }
+
+    &:hover {
+      border-color: #c0c4cc;
+    }
+
+    &:focus {
+      border-color: var(--color-primary);
+    }
+  }
+}
+
+/**
+ * pagination 样式覆盖
+ */
+
+.el-pagination {
+  &.is-background {
+    .el-pager {
+      li {
+        &:hover {
+          color: var(--color-primary);
+        }
+        &.active {
+          background-color: var(--color-primary);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * message-box 样式覆盖
+ */
+
+.el-message-box {
+  .el-message-box__headerbtn {
+    &:hover {
+      .el-message-box__close {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+/**
+ * form-item 样式覆盖
+ */
+
+.el-form-item {
+  &.is-error {
+    & .el-input__inner,
+    & .el-textarea__inner {
+      &, &:focus {
+        border-color: var(--color-danger);
+      }
+    }
+  }
+  .el-form-item__error {
+    color: var(--color-danger);
+    font-size: 14px;
+  }
+}

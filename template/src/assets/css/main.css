@@ -1,0 +1,100 @@
+body,html{
+  height: 100%;
+}
+
+body{
+  background: #f2f2f2;
+  font-size: 12px;
+  color: #333;
+  font-family: Arial, sans-serif, PingFangSC-Regular;
+}
+
+.g-doc{
+  height: 100%;
+}
+.g-body{
+  position: relative;
+  width: 640px;
+  padding-top: 62px;
+  margin: 0 auto 60px;
+}
+
+
+.u-nodata{
+  height: 22px;
+  margin-top: 190px;
+  text-align: center;
+  font-size: 16px;
+  color: #bbb;
+}
+.u-loading{
+  margin-top: 30px;
+  line-height: 30px;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ------------------- */
+.f-cb:after{
+  display: block; clear: both; visibility: hidden; height: 0;
+  overflow: hidden; content: ".";
+}
+.f-fl{float: left; }
+.f-fr{float: right; }
+.f-dn{display: none;}
+.f-toe{overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+.f-toe2{
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;
+}
+
+a[href="javascript:void(0)"]{
+  cursor: default;
+}
+[type="number"]::-webkit-inner-spin-button, 
+[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #fff;
+    opacity: .5;
+}
+/* 滚动条定制 */
+
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #999;
+}
+
+/* iconfont 样式 */
+[class^="icn-"], [class*=" icn-"] {
+  font-family: 'sqfont' !important;
+  font-size: 14px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

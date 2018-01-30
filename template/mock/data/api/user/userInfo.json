@@ -1,0 +1,13 @@
+{
+    "code": 0,
+    "msg": "成功",
+    "body": {
+        "user": {
+            "email": "123@163.com",
+            "nickname": "I AM superman",
+            "photo": "//pop.nosdn.127.net/b8fec3da-a28a-434f-b6f2-9e74c76689c4",
+             "type": 99
+        }
+    },
+    "cause": null
+}

@@ -57,15 +57,15 @@ module.exports = {
       message: 'Vue build',
       choices: [
         {
-          name: 'Runtime + Compiler: recommended for most users',
-          value: 'standalone',
-          short: 'standalone',
-        },
-        {
           name:
             'Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere',
           value: 'runtime',
           short: 'runtime',
+        },
+        {
+          name: 'Runtime + Compiler: recommended for most users',
+          value: 'standalone',
+          short: 'standalone',
         },
       ],
     },
@@ -73,6 +73,26 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
+    },
+    vuex: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install vuex?',
+    },
+    elementui: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install element-ui?',
+    },
+    husky: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install husky?',
+    },
+    mock: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Need mock directory?',
     },
     lint: {
       when: 'isNotTest',
@@ -169,6 +189,8 @@ module.exports = {
     'test/unit/specs/index.js': "unit && runner === 'karma'",
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
+    'src/store/**/*': 'vuex',
+    'src/mock/**/*': 'mock',
     'src/router/**/*': 'router',
   },
   complete: function(data, { chalk }) {

@@ -15,7 +15,9 @@ npm run dev
 > "dev": "node build/dev-server.js"
 > 原版的dev启动命令定义：
 > "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
-    
+
+# eslint 修正语法
+npm run dolint
 
 # build for production with minification
 npm run build

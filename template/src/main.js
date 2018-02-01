@@ -8,13 +8,13 @@ import App from './App'
 import router from './router'
 {{/router}}
 
-{{#vuex}}  //vuex为true的时候就会写入这些
+{{#vuex}}
 import Vuex from 'vuex'
 import store from  './store'
 Vue.use(Vuex)
 {{/vuex}}
 
-{{#elementui}}  //elementui为true的时候就会写入这些
+{{#elementui}}
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/icon.css'
 import 'element-ui/lib/theme-chalk/index.css'

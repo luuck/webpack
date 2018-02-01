@@ -11,6 +11,12 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
+> 说明：开发环境启动里加了mock-server 所以跟vue原版的启动不同，dev的定义：
+> "dev": "node build/dev-server.js"
+> 原版的dev启动命令定义：
+> "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js"
+    
+
 # build for production with minification
 npm run build
 

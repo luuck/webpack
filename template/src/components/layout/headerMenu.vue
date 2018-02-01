@@ -52,6 +52,7 @@ $lheight: 24px;
   height: $height;
   background:#22354a;
   color: #fff;
+  display: flex;
   .u-logo{
     float: left;
     margin: 18px 30px;   
@@ -59,7 +60,7 @@ $lheight: 24px;
       display: inline-block;
       width: 100px;
       height: $lheight;
-      background:url(../assets/logo.png) no-repeat 0 0;   
+      background:url(../../assets/logo.png) no-repeat 0 0;
     }
     .txt{
       float: right;
@@ -88,6 +89,7 @@ $lheight: 24px;
     .logout{
       display: inline-block;
       margin-left: 5px;
+      color: #fff;
     }
   }
 }

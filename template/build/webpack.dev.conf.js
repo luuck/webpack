@@ -13,7 +13,14 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
-const devWebpackConfig = merge(baseWebpackConfig, {
+
+// add hot-reload related code to entry chunks
+Object.keys(baseWebpackConfig.entry).forEach(function (name) {
+  baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
+})
+
+
+module.exports = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
@@ -68,28 +75,29 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   ]
 })
 
-module.exports = new Promise((resolve, reject) => {
-  portfinder.basePort = process.env.PORT || config.dev.port
-  portfinder.getPort((err, port) => {
-    if (err) {
-      reject(err)
-    } else {
-      // publish the new Port, necessary for e2e tests
-      process.env.PORT = port
-      // add port to devServer config
-      devWebpackConfig.devServer.port = port
 
-      // Add FriendlyErrorsPlugin
-      devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
-        compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
-        },
-        onErrors: config.dev.notifyOnErrors
-        ? utils.createNotifierCallback()
-        : undefined
-      }))
+// module.exports = new Promise((resolve, reject) => {
+//   portfinder.basePort = process.env.PORT || config.dev.port
+//   portfinder.getPort((err, port) => {
+//     if (err) {
+//       reject(err)
+//     } else {
+//       // publish the new Port, necessary for e2e tests
+//       process.env.PORT = port
+//       // add port to devServer config
+//       devWebpackConfig.devServer.port = port
 
-      resolve(devWebpackConfig)
-    }
-  })
-})
+//       // Add FriendlyErrorsPlugin
+//       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
+//         compilationSuccessInfo: {
+//           messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+//         },
+//         onErrors: config.dev.notifyOnErrors
+//         ? utils.createNotifierCallback()
+//         : undefined
+//       }))
+
+//       resolve(devWebpackConfig)
+//     }
+//   })
+// })

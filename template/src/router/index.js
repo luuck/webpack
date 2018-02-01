@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Page from 'pages/page'
-import Error404 from 'pages/error/404'
-import Error403 from 'pages/error/403'
+import Page from '@/pages/page'
+import Error404 from '@/pages/error/404'
+import Error403 from '@/pages/error/403'
 
 Vue.use(Router)
 
@@ -13,8 +13,8 @@ export default new Router({
       path: '/',
       name: 'page',
       // redirect: '/web/main',
-      component: Page,
-      // children: [        
+      component: Page
+      // children: [
       //   {
       //     path: '/web/main',
       //     name: 'main',

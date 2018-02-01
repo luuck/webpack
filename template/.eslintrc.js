@@ -2,11 +2,13 @@
 
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint'
+    sourceType: 'module'
   },
   env: {
     browser: true,
+    "es6": true
   },
   {{#if_eq lintConfig "standard"}}
   extends: [
@@ -68,6 +70,20 @@ module.exports = {
       optionalDependencies: ['test/unit/index.js']
     }],
     {{/if_eq}}
+    'eqeqeq': 0,
+    'prefer-const': 0,
+    'one-var': 0,
+    'comma-dangle': 0,
+    'no-unused-vars': 0,
+    'new-cap': 0,
+    'no-trailing-spaces': ['error', { 'skipBlankLines': true }],
+    'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 1 }],
+    'no-extra-boolean-cast': 1,
+    'space-before-blocks': 0,
+    'no-extra-bind': 0,
+    'no-lone-blocks': 0,
+    'eol-last': 0,
+    'space-before-function-paren': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }

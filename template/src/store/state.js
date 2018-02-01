@@ -14,6 +14,7 @@ export default {
           'name': '问题',
           'url': '/content/question'
         }
+      ]
     }
   ]
 }

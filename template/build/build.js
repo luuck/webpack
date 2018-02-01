@@ -1,5 +1,7 @@
 'use strict'
-require('./check-versions')()
+// https://github.com/shelljs/shelljs
+// 去除npm node 版本校验
+// require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
 

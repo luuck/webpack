@@ -6,7 +6,9 @@ body{
   background: #f2f2f2;
   font-size: 12px;
   color: #333;
-  font-family: Arial, sans-serif, PingFangSC-Regular;
+  font-family: Arial, sans-serif, PingFangSC-Regular;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .g-doc{
@@ -14,7 +16,6 @@ body{
 }
 .g-body{
   position: relative;
-  width: 640px;
   padding-top: 62px;
   margin: 0 auto 60px;
 }

@@ -22,7 +22,7 @@ npm run build // 打包构建
 - moment + lodash + axios 常用包
 - mock 目录可选
 - husky + lint-staged 代码检测
-- 
+- eslint 代码规范
 
 ## 工程目录结构
 
@@ -41,4 +41,3 @@ npm run build // 打包构建
   └─store  //vuex
 
 ```
-

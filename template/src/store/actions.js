@@ -1,5 +1,5 @@
 import types from './mutation-types'
-import api from 'api/index'
+import api from '@/api/index'
 
 export const getUserInfo = ({ commit }) => {
   api.getUserInfo().then((info) => {

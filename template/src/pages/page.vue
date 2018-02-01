@@ -10,27 +10,27 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-  import HeaderMenu from 'components/layout/headerMenu'
-  import SideNav from 'components/layout/sideNav'
-  export default {
-    name: 'main-page',
-    computed: mapState([
-      'noHasSideNav'
-    ]),
-    components: {
-      HeaderMenu,
-      SideNav
-    },
-    created () {
-      this.$store.dispatch('getUserInfo')
-    },
-    methods: {
-      goToTop () {
-        window.scrollTo(0, 0)
-      }
+import { mapState } from 'vuex'
+import HeaderMenu from '@/components/layout/headerMenu'
+import SideNav from '@/components/layout/sideNav'
+export default {
+  name: 'main-page',
+  computed: mapState([
+    'noHasSideNav'
+  ]),
+  components: {
+    HeaderMenu,
+    SideNav
+  },
+  created () {
+    this.$store.dispatch('getUserInfo')
+  },
+  methods: {
+    goToTop () {
+      window.scrollTo(0, 0)
     }
   }
+}
 </script>
 <style>
 </style>

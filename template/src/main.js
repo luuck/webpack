@@ -21,7 +21,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 {{/elementui}}
 
-import filters from './common/filters'
+import filters from '@/common/filters'
+import '@/css/index.css'
 
 Object.keys(filters).map(key => {
   Vue.filter(key, filters[key])

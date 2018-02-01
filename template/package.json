@@ -130,6 +130,8 @@
     "husky": "^0.14.3",
     {{/husky}}
     {{#mock}}
+    "connect-history-api-fallback": "^1.5.0",
+    "eventsource-polyfill": "^0.9.6",
     "http-proxy-middleware": "^0.17.4",
     "is-ip": "^2.0.0",
     "is-url": "^1.2.2",

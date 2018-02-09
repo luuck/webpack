@@ -10,7 +10,7 @@ import router from './router'
 
 {{#vuex}}
 import Vuex from 'vuex'
-import store from  './store'
+import store from './store'
 Vue.use(Vuex)
 {{/vuex}}
 
